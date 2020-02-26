@@ -1,0 +1,22 @@
+<ion-content *ngIf="tips.length && router.isActive('/home/my-tipsters-category', true); else child" >
+  <ion-card  class="card ion-text-center ion-no-margin" color="tertiary"
+    *ngFor="let tip of tips" 
+    [ngStyle]="{'background-image': 'linear-gradient(to top, rgba(89, 89, 89, 0) 40%,' +
+    'rgba(89, 89, 89, 0.45) 60%,' +
+    'rgba(0, 0, 0, 0.98) 100%), ' +
+    'url(' + tip.thumbnail + ')'}">
+    <ion-card-title class="ion-margin-vertical">{{ tip.title }}</ion-card-title>
+    <ion-card-subtitle  >{{tip.description}}</ion-card-subtitle>
+    <ion-card-content class="ion-no-padding">
+      <ion-button  size="small" [routerLink]="['/home/my-tipsters-category', tip.id]" >View Tips</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+<ng-template #child>
+  <ion-content>
+    <ion-router-outlet></ion-router-outlet>
+  </ion-content>
+   
+</ng-template >
+

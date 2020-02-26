@@ -1,0 +1,21 @@
+<ion-content class="ion-padding">
+  <img [src]="blog.thumbnail" />
+  <span *ngIf="blog.thumbnail">
+    <div class="shares-container">
+      <button ion-button class="share-button facebook" >
+        <ion-icon name="logo-facebook"></ion-icon>&nbsp;<span>share</span>
+      </button>
+      <button ion-button class="share-button twitter ion-margin-horizontal">
+        <ion-icon name="logo-twitter"></ion-icon>&nbsp;<span>twit</span>
+      </button>
+      <button ion-button class="share-button mail ion-margin-end" >
+        <ion-icon name="mail"></ion-icon>&nbsp;<span>email</span>
+      </button>
+      <button ion-button class="share-button other" (click)="shareViaAll()">
+        <span>share...</span>
+      </button>
+    </div>
+  </span>
+  <h3><strong  [innerHTML]="title"></strong></h3>
+  <p [innerHTML]="content"></p>
+</ion-content>

@@ -1,0 +1,11 @@
+ion-tab-button{
+    --color-selected: var(--ion-color-gray);
+    width: 50%;
+    max-width: 100%;
+    font-weight: bold;
+    font-size: 1rem;
+    &.tab-selected{
+        --background: var( --ion-color-primary);  
+    }
+}
+

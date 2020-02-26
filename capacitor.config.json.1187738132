@@ -1,0 +1,23 @@
+{
+  "appId": "com.bettinggods.app",
+  "appName": "Bettingods",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "server": {
+    "url": "http://192.168.1.12:8100",
+    "cleartext": true
+  },
+  "cordova": {
+    "preferences": {
+      "ScrollEnabled": "false",
+      "android-minSdkVersion": "19",
+      "BackupWebStorage": "none",
+      "SplashMaintainAspectRatio": "true",
+      "FadeSplashScreenDuration": "300",
+      "SplashShowOnlyFirstTime": "false",
+      "SplashScreen": "screen",
+      "SplashScreenDelay": "3000"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+.gambling-responsibly-container{
+    font-size:20px;
+    line-height: 30px;
+    background: var(--ion-color-secondary);
+    color: var(--ion-color-gray, 'black');
+  
+    h4{
+      font-weight:bold;
+      color:var(--ion-color-gray, 'black');
+      margin:20px 0;
+    }
+  
+    img{
+      width:100%;
+    }
+  }
+  
+  p:first-letter{
+    padding-left: 15px;
+  }
+  
+  .rules-main-header{
+    height: 348px;
+    padding: 127px 0;
+    background-size: cover !important;
+    color: var(--ion-color-secondary);
+    font-weight: bold;
+    font-size: 47px;
+    margin: 0 !important;
+  }

@@ -1,0 +1,21 @@
+<ion-content>
+  <!-- <h2>{{routeId}}</h2> -->
+    <ion-list  *ngIf="tips.length">
+      <!-- <ion-item *ngFor="let tip of tips" >
+        <ion-label>{{tip.title}}</ion-label>
+      </ion-item>   -->
+   
+      <ion-card  class="card ion-text-center ion-no-margin" color="dark"
+      *ngFor="let tip of tips" 
+      >
+      <ion-card-title class="ion-margin-vertical">{{ tip.title }}</ion-card-title>
+      <!-- <ion-card-content class="ion-no-padding" [innerHTML]="tip.content">
+        
+      </ion-card-content> -->
+    </ion-card>
+  </ion-list>
+      <!-- <ion-infinite-scroll (ionInfinite)="loadMoreTip($event)">
+          <ion-infinite-scroll-content loadingSpinner="bubbles" *ngIf="page < lastPage && page != lastPage && !offlineMode"></ion-infinite-scroll-content>
+      </ion-infinite-scroll>
+      <img src="assets/imgs/spinner.svg" *ngIf="isInfiniteScroll" class="custom-infinite"  /> -->
+</ion-content>

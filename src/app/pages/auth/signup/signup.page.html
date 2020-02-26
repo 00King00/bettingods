@@ -1,0 +1,25 @@
+<ion-content class="signup-wrapper">
+  <div class="logo"></div>
+  <div class="login-inputs-wrapper">
+    <h3 class="login-header">Sign Up</h3>
+    <form #form="ngForm" (ngSubmit)="onSubmit(form)" >
+
+      <ion-item>
+        <ion-label color="medium">Full name</ion-label>
+        <ion-input color="medium" type="text" [(ngModel)]="data.login" name="login" required></ion-input>
+      </ion-item>
+      <ion-item >
+        <ion-label color="medium" >Email</ion-label>
+        <ion-input color="medium" type="email" [(ngModel)]="data.email" name="email" required email [pattern]="emailCheck"></ion-input>
+      </ion-item>
+
+      <ion-button expand="full" color="tertiary" class="ion-margin-top" type="submit" [disabled]="form.invalid" >Sign Up</ion-button>
+
+    </form>
+    
+    <div class="ion-margin-top" >
+      <a routerLink="/auth/login"><span class="ion-text-center auth-link">Login</span></a>
+      <a routerLink="/home"><span class="ion-text-center auth-link">Return to Blogs</span></a>
+    </div>
+  </div>
+</ion-content>

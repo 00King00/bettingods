@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center"><img src="assets/imgs/logo-horse.png"></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h3 class="page-header">Support</h3>
+  <form #form="ngForm" (ngSubmit)="onSubmit(form)" class="ion-margin-bottom ion-margin-bottom">
+    <ion-item color="dark" class="ion-margin-vertical">
+      <ion-label >Name</ion-label>
+      <ion-input type="text" [(ngModel)]="data.name" name="name" required></ion-input>
+    </ion-item>
+    <ion-item color="dark" class="ion-margin-bottom">
+      <ion-label >Email</ion-label>
+      <ion-input type="text" [(ngModel)]="data.email" name="email" required email [pattern]="emailCheck"></ion-input>
+    </ion-item>
+    <ion-item color="dark" class="ion-margin-bottom">
+      <ion-label >Subject</ion-label>
+      <ion-input type="text" [(ngModel)]="data.subject" name="subject" required></ion-input>
+    </ion-item>
+    <ion-item color="dark" class="ion-margin-bottom" >
+      <ion-textarea class="logins textarea-logins" [(ngModel)]="data.message" name="message" placeholder="Message" rows="5" required></ion-textarea>
+    </ion-item>
+
+    <ion-button expand="full" color="tertiary" class="ion-padding-vertical" type="submit" [disabled]="form.invalid" >  Send Your Message </ion-button>
+  </form>
+  <p  class="support-info ion-padding">
+    If you have any questions about a service on Betting Gods or queries about your
+    current subscriptions or payments then please complete the following form. We endeavour to respond within
+    24hrs.
+  </p>
+  <div  class="support-info ion-padding-bottom ion-padding-horizontal">
+    Betting Gods Malta Ltd                <br />
+    Level -4, The Quay, Portomaso Marina, <br />
+    STJ 4010, Malta
+  </div>
+  <div class="support-info ion-padding-horizontal">Company No: C81743</div>
+  
+  <br/>
+ 
+</ion-content>
+

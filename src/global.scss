@@ -24,3 +24,102 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+
+
+ion-title{
+    &.md{
+        img{
+             transform: translate(-50%, 3px);
+        }
+    }
+    img{
+        display: inline-block;
+        width: 52px;
+        height: 52px;
+        max-height: 52px;
+       
+    }
+}
+ion-checkbox{
+    --border-radius: 100%;
+    --size: 25px;
+    --border-width: 3px;
+    --checkmark-color: white;
+    --border-color: white;
+    --background: white;
+}
+ion-button{
+    --ion-padding: 20px;
+    font-size: 25px;
+}
+ion-back-button{
+   position: absolute;
+}
+ion-item{
+    --highlight-color-valid: var(--ion-color-primary);
+}
+//====== change default ionic class
+ion-alert{
+    --background: var(--ion-color-dark) !important;
+    &.error{
+        .alert-head{
+            background: var(--ion-color-danger);
+        }
+    }
+    .alert-{
+        &head{
+            background: var(--ion-color-primary);
+            margin-bottom: 16px; 
+        }
+        &title{
+            color: var(--ion-color-secondary) !important;
+        }
+        &sub-title{
+            color: var(--ion-color-secondary) !important;
+            margin-bottom: 16px;
+        }
+    }
+    
+}
+
+//====== end change default ionic class
+h4,h5,h6{
+    font-weight: 700;
+}
+.login-inputs-wrapper{
+    background: rgba(255, 255, 255, .7);
+    width: 92%;
+    border-radius: 5px;
+    margin:0 auto;
+    overflow: hidden;
+    padding:15px 0 20px;
+}
+
+.logo {
+    min-height: 100px;
+    background-size: contain !important;
+    margin-bottom: 10vh;
+    background: url('./assets/imgs/logo.png') no-repeat center center, rgba(255, 255,255,0.4);
+}
+
+.page-header{
+    color: var(--ion-color-tertiary);
+    font-size: 35px;
+    text-align: center;
+    margin: 3vh 0;
+    font-weight: bold;
+}
+
+.login-sub-header{
+    color: #ffffff;
+}
+
+
+.auth-link{
+    display: inline-block;
+    width: 49%;
+    padding: 10px 15px;
+    font-size: 16px;
+    color: #464646;
+}

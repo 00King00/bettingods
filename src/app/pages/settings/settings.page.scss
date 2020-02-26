@@ -1,0 +1,13 @@
+ion-item{
+    --ion-margin: 20px;
+    &.ion-margin-bottom{
+        --ion-margin: 4px;
+    }
+    &.shift-rigth{
+        margin-right: -16px;
+    }
+}
+
+ion-content{
+    --background: var(--ion-color-gray);
+}

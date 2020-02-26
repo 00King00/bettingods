@@ -1,0 +1,45 @@
+<ion-content class="login-wrapper">
+  <div class="logo"></div>
+  <div class="login-inputs-wrapper" focus>
+    <h3 class="page-header">Login</h3>
+
+    <form #form="ngForm" (ngSubmit)="onSubmit(form)" >
+
+      <ion-item >
+        <ion-label color="medium">Username or email</ion-label>
+        <ion-input  color="medium" type="text" [(ngModel)]="data.username" name="login" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label  color="medium" >Password</ion-label>
+        <ion-input  color="medium" type="{{data.type}}" [(ngModel)]="data.password" name="password" required></ion-input>
+      </ion-item>
+
+      <ion-item lines="full">
+        <ion-label color="medium" >Show Password</ion-label>
+        <ion-checkbox name="showpass"
+          [(ngModel)]="data.showPass"
+          (click)="changeType()"
+          slot="end"
+        ></ion-checkbox>
+      </ion-item>
+
+      <ion-item  lines="full">
+        <ion-label color="medium" >Remember me</ion-label>
+        <ion-checkbox name="remember" 
+          [(ngModel)]="data.remember"
+          slot="end"
+        ></ion-checkbox>
+      </ion-item>
+
+      <ion-button expand="full" color="tertiary" class="ion-margin-top" type="submit" [disabled]="form.invalid" > Login </ion-button>
+
+    </form>
+    <div class="ion-margin-top" >
+      <div routerLink="/auth/forgot-password" class="ion-text-center"><span class="auth-link">Forgot password?</span></div>
+      <a routerLink="/auth/signup"><span  class="auth-link ion-text-center">Sign up</span></a>
+      <a routerLink="/home"><span class="auth-link ion-text-center">Return to Blogs</span></a>
+    </div>
+
+  </div>
+</ion-content>

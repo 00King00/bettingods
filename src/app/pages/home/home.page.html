@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center"><img src="assets/imgs/logo-horse.png"></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+
+      <ion-tab-button tab="blogs" >
+        <ion-icon name="document"></ion-icon>
+        <ion-label>Blogs</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="my-tipsters-category" *ngIf="auth.token">
+        <ion-icon name="trending-up"></ion-icon>
+        <ion-label>my-tipsters</ion-label>
+      </ion-tab-button>
+  
+      <ion-tab-button tab="buy-tipsters"  *ngIf="!auth.token">
+        <ion-icon name="information-circle"></ion-icon>
+        <ion-label>buy-tipsters</ion-label>
+      </ion-tab-button>
+
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-content>

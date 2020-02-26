@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title color="secondary" class="ion-text-center">
+      <strong>Settings</strong>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item color="dark"  class="ion-margin-vertical">
+    <ion-label color="primary">Change Password</ion-label>
+    <ion-icon color="primary" name="arrow-forward" slot="end" routerLink="/auth/change-password"></ion-icon>
+  </ion-item>
+
+  <ion-item color="dark" class="ion-margin-bottom">
+    <ion-label color="primary" >Receive Blog Notifications</ion-label>
+    <ion-toggle [(ngModel)]="settingsData.blogNotif" slot="end" class="ion-padding-end" (click)="setSetting('blogNotif')"></ion-toggle>
+  </ion-item>
+  <ion-item color="dark" >
+    <ion-label color="primary" >Receive Tips Notifications</ion-label>
+    <ion-toggle [(ngModel)]="settingsData.tipNotif" slot="end" class="ion-padding-end" (click)="setSetting('tipNotif')"></ion-toggle>
+  </ion-item>
+
+  <ion-item color="dark" class="ion-margin-vertical ion-no-padding">
+      <ion-item detail="false" color="dark" slot="start" class="ion-no-margin" routerLink="/home/blogs">
+        <ion-icon color="primary" name="arrow-back" slot="start" class="ion-no-margin"></ion-icon>
+        <ion-label color="primary" > Return to Blogs </ion-label>
+      </ion-item >
+      <ion-item detail="false" color="dark" slot="end" class="ion-no-margin ion-text-right ion-no-padding shift-rigth" routerLink="/home/my-tipsters">
+        <ion-label color="primary" class="ion-no-margin"> Return to Tips </ion-label>
+        <ion-icon color="primary" class="ion-no-margin" name="arrow-forward" slot="end" ></ion-icon>
+      </ion-item >
+  </ion-item>
+   
+
+
+</ion-content>
